@@ -2,11 +2,17 @@
 
 import { motion } from 'framer-motion';
 import {
-  BriefcaseBusiness,
+  Cog,
   ContactRound,
+  Github,
   GraduationCap,
-  Layers3,
+  Linkedin,
+  Mail,
+  MapPin,
+  Monitor,
+  Phone,
   UserRound,
+  UsersRound,
   Wrench,
 } from 'lucide-react';
 import { useMemo, useState } from 'react';
@@ -14,7 +20,16 @@ import { siteContent, type Locale } from '@/data/site-content';
 import { LanguageToggle } from './language-toggle';
 import { SectionCard } from './section-card';
 
-const navLinks = ['about', 'projects', 'skills', 'journey', 'contact'] as const;
+const navLinks = ['about', 'journey', 'techStack', 'skills', 'contact'] as const;
+
+function HardSkillsIcon() {
+  return (
+    <span className="relative inline-flex h-6 w-6 items-center justify-center">
+      <Wrench size={18} />
+      <Cog size={11} className="absolute -bottom-1 -right-2" />
+    </span>
+  );
+}
 
 export function SiteShell() {
   const [locale, setLocale] = useState<Locale>('es');
@@ -55,7 +70,7 @@ export function SiteShell() {
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
             <a
-              href="#projects"
+              href="#techStack"
               className="rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-[var(--accent-dark)]"
             >
               {content.hero.ctaPrimary}
@@ -77,24 +92,43 @@ export function SiteShell() {
             icon={<UserRound size={22} />}
           />
           <SectionCard
-            id="projects"
-            title={content.sections.projects.title}
-            description={content.sections.projects.description}
-            icon={<Layers3 size={22} />}
-          />
-          <SectionCard
-            id="skills"
-            title={content.sections.skills.title}
-            description={content.sections.skills.description}
-            icon={<Wrench size={22} />}
-          />
-          <SectionCard
             id="journey"
             title={content.sections.journey.title}
             description={content.sections.journey.description}
             icon={<GraduationCap size={22} />}
           />
         </section>
+
+        <SectionCard
+          id="techStack"
+          title={content.sections.techStack.title}
+          description={content.sections.techStack.description}
+          icon={<Monitor size={22} />}
+        />
+
+        <motion.section
+          id="skills"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55 }}
+          className="rounded-3xl border border-white/10 bg-[var(--surface)]/55 p-6"
+        >
+          <div className="grid gap-6 md:grid-cols-2">
+            <SectionCard
+              id="hard-skills"
+              title={content.sections.hardSkills.title}
+              description={content.sections.hardSkills.description}
+              icon={<HardSkillsIcon />}
+            />
+            <SectionCard
+              id="soft-skills"
+              title={content.sections.softSkills.title}
+              description={content.sections.softSkills.description}
+              icon={<UsersRound size={22} />}
+            />
+          </div>
+        </motion.section>
 
         <motion.section
           id="contact"
@@ -112,14 +146,45 @@ export function SiteShell() {
           </div>
           <p className="mb-6 text-sm text-[var(--muted)]">{content.sections.contact.description}</p>
 
-          <ul className="space-y-2 text-sm text-[var(--muted)]">
-            <li className="flex items-center gap-2">
-              <BriefcaseBusiness size={16} className="text-[var(--accent)]" />
+          <ul className="space-y-3 text-base font-medium text-[var(--foreground)]">
+            <li className="flex items-center gap-3">
+              <MapPin size={18} className="text-[var(--accent)]" />
               <span>{content.contact.location}</span>
             </li>
-            <li>{content.contact.email}</li>
-            <li>{content.contact.github}</li>
-            <li>{content.contact.linkedin}</li>
+            <li className="flex items-center gap-3">
+              <Mail size={18} className="text-[var(--accent)]" />
+              <a href={`mailto:${content.contact.email}`} className="transition hover:text-[var(--accent)]">
+                {content.contact.email}
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Phone size={18} className="text-[var(--accent)]" />
+              <a href="tel:+34645950225" className="transition hover:text-[var(--accent)]">
+                {content.contact.phone}
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Github size={18} className="text-[var(--accent)]" />
+              <a
+                href="https://github.com/Rodrigo-LPz"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-[var(--accent)]"
+              >
+                {content.contact.github}
+              </a>
+            </li>
+            <li className="flex items-center gap-3">
+              <Linkedin size={18} className="text-[var(--accent)]" />
+              <a
+                href="https://www.linkedin.com/in/rodrigo-lopez-perez"
+                target="_blank"
+                rel="noreferrer"
+                className="transition hover:text-[var(--accent)]"
+              >
+                {content.contact.linkedin}
+              </a>
+            </li>
           </ul>
         </motion.section>
       </main>
