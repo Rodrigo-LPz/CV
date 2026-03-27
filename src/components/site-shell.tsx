@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import {
-  ArrowUpRight,
+  Reply,
   ContactRound,
   Github,
   GraduationCap,
@@ -102,7 +102,7 @@ export function SiteShell() {
               {content.sections.journey.description}
             </p>
 
-            <div className="grid gap-4 sm:grid-cols-2">
+            <div className="grid gap-4">
               <div
                 id="studies"
                 className="rounded-2xl border border-white/10 bg-[var(--surface)]/45 p-4 shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
@@ -136,7 +136,7 @@ export function SiteShell() {
           id="references"
           title={content.sections.references.title}
           description={content.sections.references.description}
-          icon={<ArrowUpRight size={22} />}
+          icon={<Reply size={22} />}
         />
 
         <motion.article
