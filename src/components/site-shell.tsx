@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import {
-  Cog,
   ContactRound,
   Github,
   GraduationCap,
@@ -11,6 +10,9 @@ import {
   MapPin,
   Monitor,
   Phone,
+  School,
+  ScrollText,
+  Share2,
   UserRound,
   UsersRound,
   Wrench,
@@ -20,16 +22,7 @@ import { siteContent, type Locale } from '@/data/site-content';
 import { LanguageToggle } from './language-toggle';
 import { SectionCard } from './section-card';
 
-const navLinks = ['about', 'journey', 'techStack', 'skills', 'contact'] as const;
-
-function HardSkillsIcon() {
-  return (
-    <span className="relative inline-flex h-6 w-6 items-center justify-center">
-      <Wrench size={18} />
-      <Cog size={11} className="absolute -bottom-1 -right-2" />
-    </span>
-  );
-}
+const navLinks = ['about', 'journey', 'references', 'techStack', 'contact'] as const;
 
 export function SiteShell() {
   const [locale, setLocale] = useState<Locale>('es');
@@ -84,42 +77,68 @@ export function SiteShell() {
           </div>
         </motion.section>
 
-        <section className="grid gap-6 md:grid-cols-2">
+        <section className="grid gap-6 lg:grid-cols-[1.15fr_1fr]">
           <SectionCard
             id="about"
             title={content.sections.about.title}
             description={content.sections.about.description}
             icon={<UserRound size={22} />}
+            className="h-full"
           />
-          <SectionCard
-            id="journey"
-            title={content.sections.journey.title}
-            description={content.sections.journey.description}
-            icon={<GraduationCap size={22} />}
-          />
+
+          <div className="grid gap-6">
+            <SectionCard
+              id="journey"
+              title={content.sections.journey.title}
+              description={content.sections.journey.description}
+              icon={<GraduationCap size={22} />}
+            />
+            <SectionCard
+              id="studies"
+              title={content.sections.studies.title}
+              description={content.sections.studies.description}
+              icon={<School size={22} />}
+            />
+            <SectionCard
+              id="credentials"
+              title={content.sections.credentials.title}
+              description={content.sections.credentials.description}
+              icon={<ScrollText size={22} />}
+            />
+          </div>
         </section>
 
         <SectionCard
-          id="techStack"
-          title={content.sections.techStack.title}
-          description={content.sections.techStack.description}
-          icon={<Monitor size={22} />}
+          id="references"
+          title={content.sections.references.title}
+          description={content.sections.references.description}
+          icon={<Share2 size={22} />}
         />
 
         <motion.section
-          id="skills"
+          id="techStack"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55 }}
           className="rounded-3xl border border-white/10 bg-[var(--surface)]/55 p-6"
         >
+          <div className="mb-6 rounded-2xl border border-white/10 bg-[var(--card)]/45 p-6">
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">
+              <Monitor size={22} />
+            </div>
+            <h2 className="mb-2 text-2xl font-bold text-white">{content.sections.techStack.title}</h2>
+            <p className="text-sm leading-relaxed text-[var(--muted)]">
+              {content.sections.techStack.description}
+            </p>
+          </div>
+
           <div className="grid gap-6 md:grid-cols-2">
             <SectionCard
               id="hard-skills"
               title={content.sections.hardSkills.title}
               description={content.sections.hardSkills.description}
-              icon={<HardSkillsIcon />}
+              icon={<Wrench size={22} />}
             />
             <SectionCard
               id="soft-skills"

@@ -11,8 +11,8 @@ type Hero = {
 type Nav = {
   about: string;
   journey: string;
+  references: string;
   techStack: string;
-  skills: string;
   contact: string;
 };
 
@@ -36,6 +36,9 @@ type SiteContent = {
   sections: {
     about: Section;
     journey: Section;
+    studies: Section;
+    credentials: Section;
+    references: Section;
     techStack: Section;
     hardSkills: Section;
     softSkills: Section;
@@ -50,8 +53,8 @@ export const siteContent: Record<Locale, SiteContent> = {
     nav: {
       about: 'Sobre mí',
       journey: 'Formación',
+      references: 'Referencias',
       techStack: 'Stack técnico',
-      skills: 'Skills',
       contact: 'Contacto',
     },
     hero: {
@@ -67,8 +70,21 @@ export const siteContent: Record<Locale, SiteContent> = {
         description: 'Bloque preparado para introducir tu propuesta de valor con enfoque en DAM y desarrollo web.',
       },
       journey: {
-        title: 'Formación y progreso',
-        description: 'Sección para formación reglada, certificaciones y evolución profesional.',
+        title: 'Formación',
+        description: 'Resumen de tu progreso académico y evolución profesional en el ámbito tecnológico.',
+      },
+      studies: {
+        title: 'Estudios formativos',
+        description: 'Trayectoria académica principal, centros de estudio y modalidad de formación.',
+      },
+      credentials: {
+        title: 'Iconografía',
+        description: 'Certificados, acreditaciones y títulos complementarios que fortalecen tu perfil.',
+      },
+      references: {
+        title: 'Referencias',
+        description:
+          'Bloque pensado para enlazar proyectos destacados y recursos compartibles, similar a una sección de difusión.',
       },
       techStack: {
         title: 'Stack técnico',
@@ -103,8 +119,8 @@ export const siteContent: Record<Locale, SiteContent> = {
     nav: {
       about: 'About',
       journey: 'Education',
+      references: 'References',
       techStack: 'Tech stack',
-      skills: 'Skills',
       contact: 'Contact',
     },
     hero: {
@@ -120,8 +136,20 @@ export const siteContent: Record<Locale, SiteContent> = {
         description: 'Prepared block to introduce your value proposition around DAM and web development.',
       },
       journey: {
-        title: 'Education and growth',
-        description: 'Section for formal education, certifications, and professional progression.',
+        title: 'Education',
+        description: 'Summary of your academic progress and professional growth within tech.',
+      },
+      studies: {
+        title: 'Formal studies',
+        description: 'Main education path, schools, and training modality.',
+      },
+      credentials: {
+        title: 'Credentials',
+        description: 'Certificates, complementary credentials, and additional qualifications.',
+      },
+      references: {
+        title: 'References',
+        description: 'Section intended for featured project links and share-friendly resources.',
       },
       techStack: {
         title: 'Tech stack',
