@@ -74,7 +74,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         description: 'Resumen de tu progreso académico y evolución profesional en el ámbito tecnológico.',
       },
       studies: {
-        title: 'Estudios formativos',
+        title: 'Estudios',
         description: 'Trayectoria académica principal, centros de estudio y modalidad de formación.',
       },
       credentials: {
@@ -140,7 +140,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         description: 'Summary of your academic progress and professional growth within tech.',
       },
       studies: {
-        title: 'Formal studies',
+        title: 'Studies',
         description: 'Main education path, schools, and training modality.',
       },
       credentials: {

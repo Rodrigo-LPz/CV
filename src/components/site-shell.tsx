@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import {
+  ArrowUpRight,
   ContactRound,
   Github,
   GraduationCap,
@@ -12,7 +13,6 @@ import {
   Phone,
   School,
   ScrollText,
-  Send,
   UserRound,
   UsersRound,
   Wrench,
@@ -77,7 +77,7 @@ export function SiteShell() {
           </div>
         </motion.section>
 
-        <section className="grid gap-6 lg:grid-cols-[1.15fr_1fr]">
+        <section className="grid items-stretch gap-6 lg:grid-cols-2">
           <SectionCard
             id="about"
             title={content.sections.about.title}
@@ -92,7 +92,7 @@ export function SiteShell() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.5 }}
-            className="rounded-3xl border border-white/10 bg-[var(--card)]/45 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+            className="h-full rounded-3xl border border-white/10 bg-[var(--card)]/45 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
           >
             <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">
               <GraduationCap size={22} />
@@ -136,42 +136,53 @@ export function SiteShell() {
           id="references"
           title={content.sections.references.title}
           description={content.sections.references.description}
-          icon={<Send size={22} />}
+          icon={<ArrowUpRight size={22} />}
         />
 
-        <motion.section
+        <motion.article
           id="techStack"
           initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
           transition={{ duration: 0.55 }}
-          className="rounded-3xl border border-white/10 bg-[var(--surface)]/55 p-6"
+          className="rounded-3xl border border-white/10 bg-[var(--card)]/45 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
         >
-          <div className="mb-6 rounded-2xl border border-white/10 bg-[var(--card)]/45 p-6">
-            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">
-              <Monitor size={22} />
-            </div>
-            <h2 className="mb-2 text-2xl font-bold text-white">{content.sections.techStack.title}</h2>
-            <p className="text-sm leading-relaxed text-[var(--muted)]">
-              {content.sections.techStack.description}
-            </p>
+          <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">
+            <Monitor size={22} />
           </div>
+          <h2 className="mb-2 text-2xl font-bold text-white">{content.sections.techStack.title}</h2>
+          <p className="mb-6 text-sm leading-relaxed text-[var(--muted)]">
+            {content.sections.techStack.description}
+          </p>
 
-          <div className="grid gap-6 md:grid-cols-2">
-            <SectionCard
+          <div className="grid gap-4 md:grid-cols-2">
+            <div
               id="hard-skills"
-              title={content.sections.hardSkills.title}
-              description={content.sections.hardSkills.description}
-              icon={<Wrench size={22} />}
-            />
-            <SectionCard
+              className="rounded-2xl border border-white/10 bg-[var(--surface)]/45 p-4 shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--accent)]/15 text-[var(--accent)]">
+                <Wrench size={18} />
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-white">{content.sections.hardSkills.title}</h3>
+              <p className="text-sm leading-relaxed text-[var(--muted)]">
+                {content.sections.hardSkills.description}
+              </p>
+            </div>
+
+            <div
               id="soft-skills"
-              title={content.sections.softSkills.title}
-              description={content.sections.softSkills.description}
-              icon={<UsersRound size={22} />}
-            />
+              className="rounded-2xl border border-white/10 bg-[var(--surface)]/45 p-4 shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+            >
+              <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--accent)]/15 text-[var(--accent)]">
+                <UsersRound size={18} />
+              </div>
+              <h3 className="mb-2 text-lg font-semibold text-white">{content.sections.softSkills.title}</h3>
+              <p className="text-sm leading-relaxed text-[var(--muted)]">
+                {content.sections.softSkills.description}
+              </p>
+            </div>
           </div>
-        </motion.section>
+        </motion.article>
 
         <motion.section
           id="contact"
