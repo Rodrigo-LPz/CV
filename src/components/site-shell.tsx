@@ -2,7 +2,6 @@
 
 import { motion } from 'framer-motion';
 import {
-  Reply,
   ContactRound,
   Github,
   GraduationCap,
@@ -11,12 +10,14 @@ import {
   MapPin,
   Monitor,
   Phone,
+  Redo2,
   School,
   ScrollText,
   UserRound,
   UsersRound,
   Wrench,
 } from 'lucide-react';
+import Image from 'next/image';
 import { useMemo, useState } from 'react';
 import { siteContent, type Locale } from '@/data/site-content';
 import { LanguageToggle } from './language-toggle';
@@ -52,28 +53,43 @@ export function SiteShell() {
           transition={{ duration: 0.6 }}
           className="rounded-3xl border border-white/10 bg-[var(--surface)]/55 p-8"
         >
-          <span className="mb-5 inline-flex rounded-full border border-[var(--accent)]/35 bg-[var(--accent)]/10 px-3 py-1 text-xs font-semibold text-[var(--accent)]">
-            {content.hero.badge}
-          </span>
-          <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-6xl">
-            {content.hero.title}
-          </h1>
-          <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
-            {content.hero.subtitle}
-          </p>
-          <div className="mt-8 flex flex-wrap gap-3">
-            <a
-              href="#techStack"
-              className="rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-[var(--accent-dark)]"
-            >
-              {content.hero.ctaPrimary}
-            </a>
-            <a
-              href="#contact"
-              className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
-            >
-              {content.hero.ctaSecondary}
-            </a>
+          <div className="grid gap-8 lg:grid-cols-[1.45fr_0.8fr] lg:items-center">
+            <div>
+              <span className="mb-5 inline-flex rounded-full border border-[var(--accent)]/35 bg-[var(--accent)]/10 px-3 py-1 text-xs font-semibold text-[var(--accent)]">
+                {content.hero.badge}
+              </span>
+              <h1 className="text-4xl font-extrabold tracking-tight text-white md:text-6xl">
+                {content.hero.title}
+              </h1>
+              <p className="mt-4 max-w-2xl text-base leading-relaxed text-[var(--muted)] md:text-lg">
+                {content.hero.subtitle}
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <a
+                  href="#techStack"
+                  className="rounded-full bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-zinc-950 transition hover:bg-[var(--accent-dark)]"
+                >
+                  {content.hero.ctaPrimary}
+                </a>
+                <a
+                  href="#contact"
+                  className="rounded-full border border-white/20 px-5 py-3 text-sm font-semibold text-white transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  {content.hero.ctaSecondary}
+                </a>
+              </div>
+            </div>
+
+            <div className="mx-auto h-56 w-56 overflow-hidden rounded-full border-4 border-white/15 bg-zinc-700/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:h-64 sm:w-64">
+              <Image
+                src="/profile.jpg"
+                alt="Foto de perfil de Rodrigo López Pérez"
+                width={512}
+                height={512}
+                className="h-full w-full object-cover"
+                priority
+              />
+            </div>
           </div>
         </motion.section>
 
@@ -136,7 +152,7 @@ export function SiteShell() {
           id="references"
           title={content.sections.references.title}
           description={content.sections.references.description}
-          icon={<Reply size={22} />}
+          icon={<Redo2 size={22} />}
         />
 
         <motion.article

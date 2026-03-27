@@ -59,7 +59,7 @@ export const siteContent: Record<Locale, SiteContent> = {
     },
     hero: {
       badge: 'Disponible para prácticas y rol junior',
-      title: 'Rodrigo López',
+      title: 'Rodrigo López Pérez',
       subtitle: 'CV web en evolución: diseño minimalista, identidad propia y experiencia memorable.',
       ctaPrimary: 'Ver perfil técnico',
       ctaSecondary: 'Contactar',
@@ -125,7 +125,7 @@ export const siteContent: Record<Locale, SiteContent> = {
     },
     hero: {
       badge: 'Open to internships and junior roles',
-      title: 'Rodrigo López',
+      title: 'Rodrigo López Pérez',
       subtitle: 'Evolving web CV: minimalist design, personal identity, and a memorable experience.',
       ctaPrimary: 'View technical profile',
       ctaSecondary: 'Get in touch',
