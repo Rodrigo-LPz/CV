@@ -12,7 +12,7 @@ import {
   Phone,
   School,
   ScrollText,
-  Share2,
+  Send,
   UserRound,
   UsersRound,
   Wrench,
@@ -86,33 +86,57 @@ export function SiteShell() {
             className="h-full"
           />
 
-          <div className="grid gap-6">
-            <SectionCard
-              id="journey"
-              title={content.sections.journey.title}
-              description={content.sections.journey.description}
-              icon={<GraduationCap size={22} />}
-            />
-            <SectionCard
-              id="studies"
-              title={content.sections.studies.title}
-              description={content.sections.studies.description}
-              icon={<School size={22} />}
-            />
-            <SectionCard
-              id="credentials"
-              title={content.sections.credentials.title}
-              description={content.sections.credentials.description}
-              icon={<ScrollText size={22} />}
-            />
-          </div>
+          <motion.article
+            id="journey"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.2 }}
+            transition={{ duration: 0.5 }}
+            className="rounded-3xl border border-white/10 bg-[var(--card)]/45 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+          >
+            <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">
+              <GraduationCap size={22} />
+            </div>
+            <h2 className="mb-2 text-2xl font-bold text-white">{content.sections.journey.title}</h2>
+            <p className="mb-6 text-sm leading-relaxed text-[var(--muted)]">
+              {content.sections.journey.description}
+            </p>
+
+            <div className="grid gap-4 sm:grid-cols-2">
+              <div
+                id="studies"
+                className="rounded-2xl border border-white/10 bg-[var(--surface)]/45 p-4 shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--accent)]/15 text-[var(--accent)]">
+                  <School size={18} />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">{content.sections.studies.title}</h3>
+                <p className="text-sm leading-relaxed text-[var(--muted)]">
+                  {content.sections.studies.description}
+                </p>
+              </div>
+
+              <div
+                id="credentials"
+                className="rounded-2xl border border-white/10 bg-[var(--surface)]/45 p-4 shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+              >
+                <div className="mb-3 flex h-10 w-10 items-center justify-center rounded-xl bg-[var(--accent)]/15 text-[var(--accent)]">
+                  <ScrollText size={18} />
+                </div>
+                <h3 className="mb-2 text-lg font-semibold text-white">{content.sections.credentials.title}</h3>
+                <p className="text-sm leading-relaxed text-[var(--muted)]">
+                  {content.sections.credentials.description}
+                </p>
+              </div>
+            </div>
+          </motion.article>
         </section>
 
         <SectionCard
           id="references"
           title={content.sections.references.title}
           description={content.sections.references.description}
-          icon={<Share2 size={22} />}
+          icon={<Send size={22} />}
         />
 
         <motion.section

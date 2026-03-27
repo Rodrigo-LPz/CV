@@ -78,7 +78,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         description: 'Trayectoria académica principal, centros de estudio y modalidad de formación.',
       },
       credentials: {
-        title: 'Iconografía',
+        title: 'Certificados',
         description: 'Certificados, acreditaciones y títulos complementarios que fortalecen tu perfil.',
       },
       references: {
@@ -144,7 +144,7 @@ export const siteContent: Record<Locale, SiteContent> = {
         description: 'Main education path, schools, and training modality.',
       },
       credentials: {
-        title: 'Credentials',
+        title: 'Certificates',
         description: 'Certificates, complementary credentials, and additional qualifications.',
       },
       references: {
