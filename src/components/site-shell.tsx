@@ -10,7 +10,6 @@ import {
   MapPin,
   Monitor,
   Phone,
-  Redo2,
   School,
   ScrollText,
   UserRound,
@@ -24,6 +23,15 @@ import { LanguageToggle } from './language-toggle';
 import { SectionCard } from './section-card';
 
 const navLinks = ['about', 'journey', 'references', 'techStack', 'contact'] as const;
+
+function CurvedArrowIcon() {
+  return (
+    <svg viewBox="0 0 24 24" className="h-[22px] w-[22px] fill-current" aria-hidden="true">
+      <path d="M5.2 18.2c.5 0 .9-.4.9-.9v-1.8c0-3.5 2.9-6.4 6.4-6.4h3.7l-1.8 1.8a.9.9 0 0 0 1.3 1.3l3.4-3.4a.9.9 0 0 0 0-1.3l-3.4-3.4a.9.9 0 1 0-1.3 1.3l1.8 1.8h-3.7c-4.6 0-8.2 3.7-8.2 8.2v1.8c0 .5.4.9.9.9Z"/>
+    </svg>
+  );
+}
+
 
 export function SiteShell() {
   const [locale, setLocale] = useState<Locale>('es');
@@ -152,7 +160,7 @@ export function SiteShell() {
           id="references"
           title={content.sections.references.title}
           description={content.sections.references.description}
-          icon={<Redo2 size={22} />}
+          icon={<CurvedArrowIcon />}
         />
 
         <motion.article

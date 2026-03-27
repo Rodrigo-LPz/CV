@@ -58,9 +58,9 @@ export const siteContent: Record<Locale, SiteContent> = {
       contact: 'Contacto',
     },
     hero: {
-      badge: 'Disponible para prácticas y rol junior',
+      badge: 'Desarrollador web junior · DAM · Disponible para prácticas',
       title: 'Rodrigo López Pérez',
-      subtitle: 'CV web en evolución: diseño minimalista, identidad propia y experiencia memorable.',
+      subtitle: 'Estudiante de 2º de DAM orientado a desarrollo web, mantenimiento y bases de datos. Busco aportar soluciones reales combinando creatividad, lógica y aprendizaje continuo.',
       ctaPrimary: 'Ver perfil técnico',
       ctaSecondary: 'Contactar',
     },
@@ -124,9 +124,9 @@ export const siteContent: Record<Locale, SiteContent> = {
       contact: 'Contact',
     },
     hero: {
-      badge: 'Open to internships and junior roles',
+      badge: 'Junior web developer · DAM · Open to internships',
       title: 'Rodrigo López Pérez',
-      subtitle: 'Evolving web CV: minimalist design, personal identity, and a memorable experience.',
+      subtitle: 'Second-year DAM student focused on web development, maintenance, and databases. I aim to deliver real solutions by combining creativity, logic, and continuous learning.',
       ctaPrimary: 'View technical profile',
       ctaSecondary: 'Get in touch',
     },
