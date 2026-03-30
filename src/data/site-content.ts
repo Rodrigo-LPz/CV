@@ -60,14 +60,16 @@ export const siteContent: Record<Locale, SiteContent> = {
     hero: {
       badge: 'Desarrollador web junior · DAM · Disponible para prácticas',
       title: 'Rodrigo López Pérez',
-      subtitle: 'Estudiante de 2º de DAM orientado a desarrollo web, mantenimiento y bases de datos. Busco aportar soluciones reales combinando creatividad, lógica y aprendizaje continuo.',
+      subtitle: 'Titulado en Desarrollo de Aplicaciones Multiplataforma (DAM), con orientación al desarrollo web, mantenimiento y arquitectura de aplicaciones y gestión de bases de datos, con experiencia en mantenimiento de aplicaciones y enfoque en la creación de soluciones eficientes, escalables, mantenibles, bien estructuradas y alineadas con buenas prácticas de desarrollo. Me gustaría incorporarme y aspirar a integrarme a un equipo profesional donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme y mejorar a nivel profesional y personal.',
       ctaPrimary: 'Ver perfil técnico',
       ctaSecondary: 'Contactar',
     },
     sections: {
       about: {
         title: 'Sobre mí',
-        description: 'Bloque preparado para introducir tu propuesta de valor con enfoque en DAM y desarrollo web.',
+        description: `Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica yaprendizaje continuo. Todo a partir de una ejecución cuidada de principio a fin.
+        
+        Me gustaría incorporarme y aspirar a integrarme a un equipo profesional donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme y mejorar a nivel profesional y personal.`,
       },
       journey: {
         title: 'Formación',

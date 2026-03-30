@@ -23,7 +23,7 @@ export function SectionCard({ id, title, description, icon, className = '' }: Se
         {icon}
       </div>
       <h2 className="mb-2 text-xl font-bold text-white sm:text-2xl">{title}</h2>
-      <p className="text-sm leading-relaxed text-[var(--muted)]">{description}</p>
+      <p className="text-sm leading-relaxed text-[var(--muted)] whitespace-pre-line">{description}</p>
     </motion.article>
   );
 }
