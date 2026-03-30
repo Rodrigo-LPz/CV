@@ -67,19 +67,19 @@ export const siteContent: Record<Locale, SiteContent> = {
     sections: {
       about: {
         title: 'Sobre mí',
-        description: 'Bloque preparado para introducir tu propuesta de valor con enfoque en DAM y desarrollo web.',
+        description: 'Soy estudiante de 2º de DAM, enfocado en desarrollo web, mantenimiento y bases de datos. Me motiva transformar ideas en soluciones útiles combinando creatividad, lógica y mejora continua.',
       },
       journey: {
         title: 'Formación',
-        description: 'Resumen de tu progreso académico y evolución profesional en el ámbito tecnológico.',
+        description: 'Formación académica orientada a informática y desarrollo de software, con base sólida en DAM y aprendizaje complementario en competencias digitales.',
       },
       studies: {
         title: 'Estudios',
-        description: 'Trayectoria académica principal, centros de estudio y modalidad de formación.',
+        description: 'IES Agustín Espinosa (2023): Bachillerato en Ciencias y Tecnología. IES Haría (actual): Desarrollo de Aplicaciones Multiplataforma (CFGS).',
       },
       credentials: {
         title: 'Certificados',
-        description: 'Certificados, acreditaciones y títulos complementarios que fortalecen tu perfil.',
+        description: 'Google Actívate: Competencias digitales para profesionales (2023) y Transformación digital para el empleo (2024).',
       },
       references: {
         title: 'Referencias',
@@ -133,19 +133,19 @@ export const siteContent: Record<Locale, SiteContent> = {
     sections: {
       about: {
         title: 'About me',
-        description: 'Prepared block to introduce your value proposition around DAM and web development.',
+        description: 'I am a second-year DAM student focused on web development, maintenance, and databases. I enjoy turning ideas into useful solutions by combining creativity, logic, and continuous improvement.',
       },
       journey: {
         title: 'Education',
-        description: 'Summary of your academic progress and professional growth within tech.',
+        description: 'Academic background focused on computing and software development, with a solid DAM foundation and complementary digital-skills learning.',
       },
       studies: {
         title: 'Studies',
-        description: 'Main education path, schools, and training modality.',
+        description: 'IES Agustín Espinosa (2023): Science and Technology Baccalaureate. IES Haría (current): Multiplatform Application Development (Higher VET).',
       },
       credentials: {
         title: 'Certificates',
-        description: 'Certificates, complementary credentials, and additional qualifications.',
+        description: 'Google Actívate: Digital Skills for Professionals (2023) and Digital Transformation for Employment (2024).',
       },
       references: {
         title: 'References',
