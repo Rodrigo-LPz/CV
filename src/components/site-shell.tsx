@@ -90,7 +90,7 @@ export function SiteShell() {
             <div className="relative mx-auto aspect-square w-full max-w-[220px] overflow-hidden rounded-full border-[3px] border-white/15 bg-zinc-700/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:max-w-[260px] sm:border-4 md:max-w-[300px] xl:max-w-[340px]">
               <Image
                 src="/Images/FotoDePerfil.png"
-                alt="Foto de perfil de Rodrigo Lopez Perez"
+                alt="Foto de perfil de Rodrigo López Pérez"
                 fill
                 sizes="(max-width: 639px) 220px, (max-width: 767px) 260px, (max-width: 1279px) 300px, 340px"
                 className="object-cover object-center"
