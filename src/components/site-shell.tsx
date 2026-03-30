@@ -262,7 +262,7 @@ export function SiteShell() {
               <li className="flex min-w-0 items-start gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 p-4 xl:col-span-2">
                 <Linkedin size={18} className="mt-0.5 shrink-0 text-[var(--accent)]" />
                 <a
-                  href="https://www.linkedin.com/in/rodrigo-lopez-perez"
+                  href="https://www.linkedin.com/in/rodrigo-l%C3%B3pepez/"
                   target="_blank"
                   rel="noreferrer"
                   className="break-words leading-relaxed transition hover:text-[var(--accent)]"
