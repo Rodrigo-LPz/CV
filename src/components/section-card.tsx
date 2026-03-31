@@ -19,9 +19,7 @@ export function SectionCard({ id, title, description, icon, className = '' }: Se
       transition={{ duration: 0.5 }}
       className={`rounded-3xl border border-white/10 bg-[var(--card)]/45 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)] ${className}`}
     >
-      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">
-        {icon}
-      </div>
+      <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">{icon}</div>
       <h2 className="mb-2 text-2xl font-bold text-white">{title}</h2>
       <p className="text-sm leading-relaxed text-[var(--muted)]">{description}</p>
     </motion.article>
