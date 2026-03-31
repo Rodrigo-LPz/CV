@@ -32,7 +32,6 @@ function CurvedArrowIcon() {
   );
 }
 
-
 export function SiteShell() {
   const [locale, setLocale] = useState<Locale>('es');
   const content = useMemo(() => siteContent[locale], [locale]);
