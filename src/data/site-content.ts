@@ -61,26 +61,26 @@ export const siteContent: Record<Locale, SiteContent> = {
     hero: {
       badge: 'Desarrollador web junior · DAM · Disponible para prácticas',
       title: 'Rodrigo López Pérez',
-      subtitle: 'Titulado en Desarrollo de Aplicaciones Multiplataforma (DAM), con enfoque en desarrollo web, arquitectura de aplicaciones y gestión de bases de datos, orientado a la creación de soluciones eficientes, escalables, mantenibles, bien estructuradas y alineadas con buenas prácticas de desarrollo.',
+      subtitle: 'Estudiante de 2º de DAM orientado a desarrollo web, mantenimiento y bases de datos. Busco aportar soluciones reales combinando creatividad, lógica y aprendizaje continuo.',
       ctaPrimary: 'Ver perfil técnico',
       ctaSecondary: 'Contactar',
     },
     sections: {
       about: {
         title: 'Sobre mí',
-        description: 'Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad, compromiso y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica y continuo de aprendizaje. Todo a partir de una ejecución cuidada de principio a fin. Me gustaría incorporarme y aspirar a integrarme a un equipo profesional de trabajo donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme, mejorar y crecer a nivel profesional y personal.',
+        description: 'Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad, compromiso y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica y continuo de aprendizaje. Todo a partir de una ejecución cuidada de principio a fin.\n\nMe gustaría incorporarme y aspirar a integrarme a un equipo profesional de trabajo donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme, mejorar y crecer a nivel profesional y personal.',
       },
       journey: {
         title: 'Formación',
-        description: 'Técnico Superior en DAM con base en programación, desarrollo web, bases de datos y mantenimiento de aplicaciones. Formación complementada con aprendizaje continuo orientado a la empleabilidad.',
+        description: 'Recorrido académico y certificaciones orientados al desarrollo de software, ordenados cronológicamente.',
       },
       studies: {
         title: 'Estudios',
-        description: 'CFGS Desarrollo de Aplicaciones Multiplataforma (DAM) — IES Haría. Bachillerato de Ciencias y Tecnología — IES Agustín Espinosa (2023).',
+        description: '● CFGS Desarrollo de Aplicaciones Multiplataforma (DAM) — IES Haría (sept. 2024 - jun. 2026).\n● Bachillerato de Ciencias y Tecnología — IES Agustín Espinosa (sept. 2022 - jun. 2024).',
       },
       credentials: {
         title: 'Certificados',
-        description: 'Google Actívate: Competencias digitales para profesionales (2023) y Transformación digital para el empleo (2024).',
+        description: '● Competencias digitales para profesionales — Google Actívate (2023).\n● Transformación digital para el empleo — Google Actívate (2024).',
       },
       references: {
         title: 'Referencias',
@@ -135,19 +135,19 @@ export const siteContent: Record<Locale, SiteContent> = {
     sections: {
       about: {
         title: 'About me',
-        description: 'I am a second-year DAM student focused on web development, maintenance, and databases. I enjoy turning ideas into useful solutions by combining creativity, logic, and continuous improvement.',
+        description: 'I am looking for an opportunity, team, or project where I can contribute initiative, responsibility, commitment, and continuous improvement while transforming ideas into practical, real-world solutions through creativity, logic, and careful execution.\n\nI want to join a professional team where I can contribute my knowledge and experience while continuing to learn, improve, and grow both professionally and personally.',
       },
       journey: {
         title: 'Education',
-        description: 'Higher Technician in DAM with solid foundations in programming, web development, databases, and application maintenance, reinforced through continuous employability-focused learning.',
+        description: 'Academic path and certifications focused on software development, organized chronologically.',
       },
       studies: {
         title: 'Studies',
-        description: 'Higher VET in Multiplatform Application Development (DAM) — IES Haría. Science and Technology Baccalaureate — IES Agustín Espinosa (2023).',
+        description: '● Higher VET in Multiplatform Application Development (DAM) — IES Haría (Sep 2024 - Jun 2026).\n● Science and Technology Baccalaureate — IES Agustín Espinosa (Sep 2022 - Jun 2024).',
       },
       credentials: {
         title: 'Certificates',
-        description: 'Google Actívate: Digital Skills for Professionals (2023) and Digital Transformation for Employment (2024).',
+        description: '● Digital Skills for Professionals — Google Actívate (2023).\n● Digital Transformation for Employment — Google Actívate (2024).',
       },
       references: {
         title: 'References',

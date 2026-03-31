@@ -91,7 +91,7 @@ export function SiteShell() {
 
             <div className="mx-auto h-56 w-56 overflow-hidden rounded-full border-4 border-white/15 bg-zinc-700/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:h-64 sm:w-64">
               <Image
-                src="/Images/FotoDePerfil.png"
+                src="/profile.jpg"
                 alt="Foto de perfil de Rodrigo López Pérez"
                 width={512}
                 height={512}
@@ -284,7 +284,7 @@ export function SiteShell() {
 
               <li className="sm:col-span-2">
                 <a
-                  href="https://www.linkedin.com/in/rodrigo-lopez-perez"
+                  href="https://www.linkedin.com/in/rodrigo-l%C3%B3pepez/"
                   target="_blank"
                   rel="noreferrer"
                   className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 px-4 py-3 leading-relaxed transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
