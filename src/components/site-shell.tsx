@@ -8,6 +8,7 @@ import {
   Linkedin,
   Mail,
   MapPin,
+  MessageCircle,
   Monitor,
   Phone,
   School,
@@ -31,6 +32,7 @@ function CurvedArrowIcon() {
     </svg>
   );
 }
+
 
 export function SiteShell() {
   const [locale, setLocale] = useState<Locale>('es');
@@ -89,7 +91,7 @@ export function SiteShell() {
 
             <div className="mx-auto h-56 w-56 overflow-hidden rounded-full border-4 border-white/15 bg-zinc-700/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:h-64 sm:w-64">
               <Image
-                src="/Images/FotoDePerfil.png"
+                src="/profile.jpg"
                 alt="Foto de perfil de Rodrigo López Pérez"
                 width={512}
                 height={512}
@@ -213,56 +215,86 @@ export function SiteShell() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 0.55 }}
-          className="rounded-3xl border border-white/10 bg-[var(--surface)]/60 p-8"
+          className="rounded-3xl border border-white/10 bg-[var(--surface)]/60 p-5 sm:p-7 lg:p-8"
         >
-          <div className="mb-5 flex items-center gap-3">
-            <span className="rounded-xl bg-[var(--accent)]/15 p-2 text-[var(--accent)]">
-              <ContactRound size={22} />
-            </span>
-            <h2 className="text-2xl font-bold text-white">{content.sections.contact.title}</h2>
-          </div>
-          <p className="mb-6 text-sm text-[var(--muted)]">{content.sections.contact.description}</p>
+          <div className="grid gap-5 lg:grid-cols-[0.95fr_1.8fr] lg:gap-7">
+            <div>
+              <div className="mb-5 flex items-center gap-3">
+                <span className="rounded-xl bg-[var(--accent)]/15 p-2 text-[var(--accent)]">
+                  <ContactRound size={22} />
+                </span>
+                <h2 className="text-2xl font-bold text-white">{content.sections.contact.title}</h2>
+              </div>
+              <p className="text-sm leading-relaxed text-[var(--muted)]">
+                {content.sections.contact.description}
+              </p>
+            </div>
 
-          <ul className="space-y-3 text-base font-medium text-[var(--foreground)]">
-            <li className="flex items-center gap-3">
-              <MapPin size={18} className="text-[var(--accent)]" />
-              <span>{content.contact.location}</span>
-            </li>
-            <li className="flex items-center gap-3">
-              <Mail size={18} className="text-[var(--accent)]" />
-              <a href={`mailto:${content.contact.email}`} className="transition hover:text-[var(--accent)]">
-                {content.contact.email}
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Phone size={18} className="text-[var(--accent)]" />
-              <a href="tel:+34645950225" className="transition hover:text-[var(--accent)]">
-                {content.contact.phone}
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Github size={18} className="text-[var(--accent)]" />
-              <a
-                href="https://github.com/Rodrigo-LPz"
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-[var(--accent)]"
-              >
-                {content.contact.github}
-              </a>
-            </li>
-            <li className="flex items-center gap-3">
-              <Linkedin size={18} className="text-[var(--accent)]" />
-              <a
-                href="https://www.linkedin.com/in/rodrigo-lopez-perez"
-                target="_blank"
-                rel="noreferrer"
-                className="transition hover:text-[var(--accent)]"
-              >
-                {content.contact.linkedin}
-              </a>
-            </li>
-          </ul>
+            <ul className="grid gap-3 text-base font-semibold text-[var(--foreground)] sm:grid-cols-2">
+              <li className="sm:col-span-2">
+                <span className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 px-4 py-3">
+                  <MapPin size={18} className="shrink-0 text-[var(--accent)]" />
+                  <span className="leading-relaxed">{content.contact.location}</span>
+                </span>
+              </li>
+
+              <li>
+                <a
+                  href={`mailto:${content.contact.email}`}
+                  className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 px-4 py-3 leading-relaxed transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  <Mail size={18} className="shrink-0 text-[var(--accent)]" />
+                  <span className="break-words">{content.contact.email}</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="tel:+34645950225"
+                  className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 px-4 py-3 leading-relaxed transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  <Phone size={18} className="shrink-0 text-[var(--accent)]" />
+                  <span>{content.contact.phone}</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://wa.me/34645950225"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 px-4 py-3 leading-relaxed transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  <MessageCircle size={18} className="shrink-0 text-[var(--accent)]" />
+                  <span>{content.contact.whatsapp}</span>
+                </a>
+              </li>
+
+              <li>
+                <a
+                  href="https://github.com/Rodrigo-LPz"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 px-4 py-3 leading-relaxed transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  <Github size={18} className="shrink-0 text-[var(--accent)]" />
+                  <span>{content.contact.github}</span>
+                </a>
+              </li>
+
+              <li className="sm:col-span-2">
+                <a
+                  href="https://www.linkedin.com/in/rodrigo-lopez-perez"
+                  target="_blank"
+                  rel="noreferrer"
+                  className="flex min-h-14 items-center gap-3 rounded-2xl border border-white/10 bg-[var(--card)]/35 px-4 py-3 leading-relaxed transition hover:border-[var(--accent)] hover:text-[var(--accent)]"
+                >
+                  <Linkedin size={18} className="shrink-0 text-[var(--accent)]" />
+                  <span>{content.contact.linkedin}</span>
+                </a>
+              </li>
+            </ul>
+          </div>
         </motion.section>
       </main>
     </div>

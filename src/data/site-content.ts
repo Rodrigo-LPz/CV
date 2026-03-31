@@ -27,6 +27,7 @@ type Contact = {
   phone: string;
   github: string;
   linkedin: string;
+  whatsapp: string;
 };
 
 type SiteContent = {
@@ -112,6 +113,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       phone: '+34 645 95 02 25',
       github: 'Rodrigo-LPz',
       linkedin: 'Rodrigo López Pérez',
+      whatsapp: '+34 645 95 02 25',
     },
   },
   en: {
@@ -177,6 +179,7 @@ export const siteContent: Record<Locale, SiteContent> = {
       phone: '+34 645 95 02 25',
       github: 'Rodrigo-LPz',
       linkedin: 'Rodrigo López Pérez',
+      whatsapp: '+34 645 95 02 25',
     },
   },
 };
