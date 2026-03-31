@@ -60,28 +60,26 @@ export const siteContent: Record<Locale, SiteContent> = {
     hero: {
       badge: 'Desarrollador web junior · DAM · Disponible para prácticas',
       title: 'Rodrigo López Pérez',
-      subtitle: 'Titulado en Desarrollo de Aplicaciones Multiplataforma (DAM), con orientación al desarrollo web, mantenimiento y arquitectura de aplicaciones y gestión de bases de datos, con experiencia en mantenimiento de aplicaciones y enfoque en la creación de soluciones eficientes, escalables, mantenibles, bien estructuradas y alineadas con buenas prácticas de desarrollo. Me gustaría incorporarme y aspirar a integrarme a un equipo profesional donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme y mejorar a nivel profesional y personal.',
+      subtitle: 'Estudiante de 2º de DAM orientado a desarrollo web, mantenimiento y bases de datos. Busco aportar soluciones reales combinando creatividad, lógica y aprendizaje continuo.',
       ctaPrimary: 'Ver perfil técnico',
       ctaSecondary: 'Contactar',
     },
     sections: {
       about: {
         title: 'Sobre mí',
-        description: `Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica yaprendizaje continuo. Todo a partir de una ejecución cuidada de principio a fin.
-        
-        Me gustaría incorporarme y aspirar a integrarme a un equipo profesional donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme y mejorar a nivel profesional y personal.`,
+        description: 'Soy estudiante de 2º de DAM, enfocado en desarrollo web, mantenimiento y bases de datos. Me motiva transformar ideas en soluciones útiles combinando creatividad, lógica y mejora continua.',
       },
       journey: {
         title: 'Formación',
-        description: 'Resumen de tu progreso académico y evolución profesional en el ámbito tecnológico.',
+        description: 'Técnico Superior en DAM con base en programación, desarrollo web, bases de datos y mantenimiento de aplicaciones. Formación complementada con aprendizaje continuo orientado a la empleabilidad.',
       },
       studies: {
         title: 'Estudios',
-        description: 'Trayectoria académica principal, centros de estudio y modalidad de formación.',
+        description: 'CFGS Desarrollo de Aplicaciones Multiplataforma (DAM) — IES Haría. Bachillerato de Ciencias y Tecnología — IES Agustín Espinosa (2023).',
       },
       credentials: {
         title: 'Certificados',
-        description: 'Certificados, acreditaciones y títulos complementarios que fortalecen tu perfil.',
+        description: 'Google Actívate: Competencias digitales para profesionales (2023) y Transformación digital para el empleo (2024).',
       },
       references: {
         title: 'Referencias',
@@ -135,19 +133,19 @@ export const siteContent: Record<Locale, SiteContent> = {
     sections: {
       about: {
         title: 'About me',
-        description: 'Prepared block to introduce your value proposition around DAM and web development.',
+        description: 'I am a second-year DAM student focused on web development, maintenance, and databases. I enjoy turning ideas into useful solutions by combining creativity, logic, and continuous improvement.',
       },
       journey: {
         title: 'Education',
-        description: 'Summary of your academic progress and professional growth within tech.',
+        description: 'Higher Technician in DAM with solid foundations in programming, web development, databases, and application maintenance, reinforced through continuous employability-focused learning.',
       },
       studies: {
         title: 'Studies',
-        description: 'Main education path, schools, and training modality.',
+        description: 'Higher VET in Multiplatform Application Development (DAM) — IES Haría. Science and Technology Baccalaureate — IES Agustín Espinosa (2023).',
       },
       credentials: {
         title: 'Certificates',
-        description: 'Certificates, complementary credentials, and additional qualifications.',
+        description: 'Google Actívate: Digital Skills for Professionals (2023) and Digital Transformation for Employment (2024).',
       },
       references: {
         title: 'References',
