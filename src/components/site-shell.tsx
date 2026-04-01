@@ -113,7 +113,7 @@ export function SiteShell() {
 
             <div className="mx-auto h-56 w-56 overflow-hidden rounded-full border-4 border-white/15 bg-zinc-700/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:h-64 sm:w-64">
               <Image
-                src="/profile.jpg"
+                src="/Images/Perfil/FotoDePerfil.png"
                 alt="Foto de perfil de Rodrigo López Pérez"
                 width={512}
                 height={512}

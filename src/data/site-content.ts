@@ -71,36 +71,31 @@ export const siteContent: Record<Locale, SiteContent> = {
     hero: {
       badge: 'Desarrollador web junior · DAM · Disponible para prácticas',
       title: 'Rodrigo López Pérez',
-      subtitle:
-        'Estudiante de 2º de DAM orientado a desarrollo web, mantenimiento y bases de datos. Busco aportar soluciones reales combinando creatividad, lógica y aprendizaje continuo.',
+      subtitle: 'Titulado en Desarrollo de Aplicaciones Multiplataforma (DAM), con enfoque en desarrollo web, arquitectura y mantenimiento de aplicaciones y gestión de bases de datos, orientado a la creación de soluciones eficientes, escalables, mantenibles, bien estructuradas y alineadas con buenas prácticas de desarrollo.',
       ctaPrimary: 'Ver perfil técnico',
       ctaSecondary: 'Contactar',
     },
     sections: {
       about: {
         title: 'Sobre mí',
-        description:
-          'Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad, compromiso y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica y continuo de aprendizaje. Todo a partir de una ejecución cuidada de principio a fin.\n\nMe gustaría incorporarme y aspirar a integrarme a un equipo profesional de trabajo donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme, mejorar y crecer a nivel profesional y personal.',
+        description: 'Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad, compromiso y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica y aprendizaje continuo. Todo a partir de una ejecución cuidada de principio a fin.\n\nMe gustaría incorporarme y aspirar a integrarme a un equipo profesional de trabajo donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme, mejorar y crecer a nivel profesional y personal.',
       },
       journey: {
         title: 'Formación',
-        description:
-          'Recorrido académico y certificaciones orientados al desarrollo de software, ordenados cronológicamente.',
+        description: 'Recorrido académico y certificaciones orientados al desarrollo de software, ordenados cronológicamente.',
       },
       studies: {
         title: 'Estudios',
-        description:
-          '● CFGS Desarrollo de Aplicaciones Multiplataforma (DAM) — IES Haría (sept. 2024 - jun. 2026).\n● Bachillerato de Ciencias y Tecnología — IES Agustín Espinosa (sept. 2022 - jun. 2024).',
+        description: '● CFGS Desarrollo de Aplicaciones Multiplataforma (DAM).\n        — IES Haría (sept. 2024 - jun. 2026)\n● Bachillerato de Ciencias y Tecnología.\n        — IES Agustín Espinosa (sept. 2022 - jun. 2024)',
       },
       credentials: {
         title: 'Certificados',
-        description:
-          '● Competencias digitales para profesionales — Google Actívate (2023).\n● Transformación digital para el empleo — Google Actívate (2024).',
+        description: '● Competencias digitales para profesionales.\n        — Google Actívate (2023)\n● Transformación digital para el empleo.\n        — Google Actívate (2024)',
       },
       references: {
         title: 'Referencias',
         description:
-          'Selección de proyectos con filtro por categoría. Pulsa cada tarjeta para desplegar más detalle técnico y enlaces.',
+          'Bloque pensado para enlazar proyectos destacados y recursos compartibles, similar a una sección de difusión.',
       },
       techStack: {
         title: 'Stack técnico',
@@ -122,43 +117,6 @@ export const siteContent: Record<Locale, SiteContent> = {
         description: 'Punto de conversión con vías directas para reclutadores y empresas.',
       },
     },
-    referencesProjects: [
-      {
-        title: 'Sistema Planetario',
-        summary: 'Web animada que recrea el movimiento planetario con enfoque visual.',
-        details:
-          'Proyecto centrado en animaciones y cálculo de trayectorias para representar órbitas y comportamiento planetario en tiempo real.',
-        tags: ['Frontend', 'JavaScript', 'Animación'],
-      },
-      {
-        title: 'Local Weather Forecast',
-        summary: 'Consulta de clima actual por ciudades con datos en tiempo real.',
-        details:
-          'Aplicación conectada a API meteorológica para mostrar temperatura, estado del cielo, humedad y previsiones básicas.',
-        tags: ['Frontend', 'API', 'JavaScript'],
-      },
-      {
-        title: 'Resúmenes de libros',
-        summary: 'Plataforma para leer resúmenes de obras clave.',
-        details:
-          'Sitio orientado a organización de contenido y búsqueda de resúmenes por categorías para mejorar la experiencia de lectura.',
-        tags: ['Web', 'UX/UI', 'Contenido'],
-      },
-      {
-        title: 'AdminGest',
-        summary: 'Aplicación de gestión administrativa.',
-        details:
-          'Proyecto enfocado en control de registros, operaciones CRUD y organización de procesos administrativos.',
-        tags: ['Java', 'SQL', 'Desktop'],
-      },
-      {
-        title: 'Archivo Manager',
-        summary: 'Gestión y manipulación de archivos en entorno Java.',
-        details:
-          'Aplicación para creación, lectura y organización de ficheros con tratamiento de errores y estructura modular.',
-        tags: ['Java', 'Backend', 'Desktop'],
-      },
-    ],
     contact: {
       location: 'C. Apolo, 3. Lanzarote (Las Palmas)',
       email: 'rodrigo.lop.per@gmail.com',
@@ -180,16 +138,14 @@ export const siteContent: Record<Locale, SiteContent> = {
     hero: {
       badge: 'Junior web developer · DAM · Open to internships',
       title: 'Rodrigo López Pérez',
-      subtitle:
-        'Second-year DAM student focused on web development, maintenance, and databases. I aim to deliver real solutions by combining creativity, logic, and continuous learning.',
+      subtitle: 'Degree holder in Multiplatform Application Development (DAM), focused on web development, application architecture and maintenance, and database management, oriented to creating efficient, scalable, maintainable, well-structured solutions aligned with best development practices.',
       ctaPrimary: 'View technical profile',
       ctaSecondary: 'Get in touch',
     },
     sections: {
       about: {
         title: 'About me',
-        description:
-          'I am looking for an opportunity, team, or project where I can contribute initiative, responsibility, commitment, and continuous improvement while transforming ideas into practical, real-world solutions through creativity, logic, and careful execution.\n\nI want to join a professional team where I can contribute my knowledge and experience while continuing to learn, improve, and grow both professionally and personally.',
+        description: 'I am looking for an opportunity, team, or project where I can contribute initiative, responsibility, commitment, and continuous improvement while transforming ideas into practical, real-world solutions through creativity, logic, and careful execution.\n\nI want to join a professional team where I can contribute my knowledge and experience while continuing to learn, improve, and grow both professionally and personally.',
       },
       journey: {
         title: 'Education',
@@ -197,18 +153,15 @@ export const siteContent: Record<Locale, SiteContent> = {
       },
       studies: {
         title: 'Studies',
-        description:
-          '● Higher VET in Multiplatform Application Development (DAM) — IES Haría (Sep 2024 - Jun 2026).\n● Science and Technology Baccalaureate — IES Agustín Espinosa (Sep 2022 - Jun 2024).',
+        description: '● Higher VET in Multiplatform Application Development (DAM).\n        — IES Haría (Sep 2024 - Jun 2026)\n● Science and Technology Baccalaureate.\n        — IES Agustín Espinosa (Sep 2022 - Jun 2024)',
       },
       credentials: {
         title: 'Certificates',
-        description:
-          '● Digital Skills for Professionals — Google Actívate (2023).\n● Digital Transformation for Employment — Google Actívate (2024).',
+        description: '● Digital Skills for Professionals.\n        — Google Actívate (2023)\n● Digital Transformation for Employment.\n        — Google Actívate (2024)',
       },
       references: {
         title: 'References',
-        description:
-          'Project selection with category filters. Click each card to expand technical details and links.',
+        description: 'Section intended for featured project links and share-friendly resources.',
       },
       techStack: {
         title: 'Tech stack',
