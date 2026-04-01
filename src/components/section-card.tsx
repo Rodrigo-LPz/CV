@@ -10,12 +10,14 @@ type SectionCardProps = {
 };
 
 export function SectionCard({ id, title, description, icon, className = '' }: SectionCardProps) {
-  const bulletItems = description
-    .split('●')
+  const normalizedDescription = description.replace(/\r/g, '');
+
+  const bulletItems = normalizedDescription
+    .split(/[●•]/)
     .map((item) => item.trim())
     .filter(Boolean);
 
-  const descriptionLines = description.split('\n');
+  const descriptionLines = normalizedDescription.split('\n');
   const hasBulletList = bulletItems.length > 1;
 
   return (
