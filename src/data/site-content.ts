@@ -61,14 +61,14 @@ export const siteContent: Record<Locale, SiteContent> = {
     hero: {
       badge: 'Desarrollador web junior · DAM · Disponible para prácticas',
       title: 'Rodrigo López Pérez',
-      subtitle: 'Estudiante de 2º de DAM orientado a desarrollo web, mantenimiento y bases de datos. Busco aportar soluciones reales combinando creatividad, lógica y aprendizaje continuo.',
+      subtitle: 'Titulado en Desarrollo de Aplicaciones Multiplataforma (DAM), con enfoque en desarrollo web, arquitectura y mantenimiento de aplicaciones y gestión de bases de datos, orientado a la creación de soluciones eficientes, escalables, mantenibles, bien estructuradas y alineadas con buenas prácticas de desarrollo.',
       ctaPrimary: 'Ver perfil técnico',
       ctaSecondary: 'Contactar',
     },
     sections: {
       about: {
         title: 'Sobre mí',
-        description: 'Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad, compromiso y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica y continuo de aprendizaje. Todo a partir de una ejecución cuidada de principio a fin.\n\nMe gustaría incorporarme y aspirar a integrarme a un equipo profesional de trabajo donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme, mejorar y crecer a nivel profesional y personal.',
+        description: 'Me encuentro en búsqueda de una oportunidad, un equipo o proyecto, en el que aportar iniciativa, responsabilidad, compromiso y mejora continua; y transformar ideas en soluciones reales, útiles y prácticas, combinando creatividad, lógica y aprendizaje continuo. Todo a partir de una ejecución cuidada de principio a fin.\n\nMe gustaría incorporarme y aspirar a integrarme a un equipo profesional de trabajo donde no sólo aportar mis conocimientos y experiencia, sino también para aprender, desarrollarme, mejorar y crecer a nivel profesional y personal.',
       },
       journey: {
         title: 'Formación',
@@ -76,11 +76,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       },
       studies: {
         title: 'Estudios',
-        description: '● CFGS Desarrollo de Aplicaciones Multiplataforma (DAM) — IES Haría (sept. 2024 - jun. 2026).\n● Bachillerato de Ciencias y Tecnología — IES Agustín Espinosa (sept. 2022 - jun. 2024).',
+        description: '● CFGS Desarrollo de Aplicaciones Multiplataforma (DAM).\n        — IES Haría (sept. 2024 - jun. 2026)\n● Bachillerato de Ciencias y Tecnología.\n        — IES Agustín Espinosa (sept. 2022 - jun. 2024)',
       },
       credentials: {
         title: 'Certificados',
-        description: '● Competencias digitales para profesionales — Google Actívate (2023).\n● Transformación digital para el empleo — Google Actívate (2024).',
+        description: '● Competencias digitales para profesionales.\n        — Google Actívate (2023)\n● Transformación digital para el empleo.\n        — Google Actívate (2024)',
       },
       references: {
         title: 'Referencias',
@@ -128,7 +128,7 @@ export const siteContent: Record<Locale, SiteContent> = {
     hero: {
       badge: 'Junior web developer · DAM · Open to internships',
       title: 'Rodrigo López Pérez',
-      subtitle: 'Second-year DAM student focused on web development, maintenance, and databases. I aim to deliver real solutions by combining creativity, logic, and continuous learning.',
+      subtitle: 'Degree holder in Multiplatform Application Development (DAM), focused on web development, application architecture and maintenance, and database management, oriented to creating efficient, scalable, maintainable, well-structured solutions aligned with best development practices.',
       ctaPrimary: 'View technical profile',
       ctaSecondary: 'Get in touch',
     },
@@ -143,11 +143,11 @@ export const siteContent: Record<Locale, SiteContent> = {
       },
       studies: {
         title: 'Studies',
-        description: '● Higher VET in Multiplatform Application Development (DAM) — IES Haría (Sep 2024 - Jun 2026).\n● Science and Technology Baccalaureate — IES Agustín Espinosa (Sep 2022 - Jun 2024).',
+        description: '● Higher VET in Multiplatform Application Development (DAM).\n        — IES Haría (Sep 2024 - Jun 2026)\n● Science and Technology Baccalaureate.\n        — IES Agustín Espinosa (Sep 2022 - Jun 2024)',
       },
       credentials: {
         title: 'Certificates',
-        description: '● Digital Skills for Professionals — Google Actívate (2023).\n● Digital Transformation for Employment — Google Actívate (2024).',
+        description: '● Digital Skills for Professionals.\n        — Google Actívate (2023)\n● Digital Transformation for Employment.\n        — Google Actívate (2024)',
       },
       references: {
         title: 'References',

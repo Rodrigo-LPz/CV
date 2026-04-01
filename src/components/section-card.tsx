@@ -37,7 +37,9 @@ export function SectionCard({ id, title, description, icon, className = '' }: Se
       {hasBulletList ? (
         <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[var(--muted)] marker:text-[var(--muted)]">
           {bulletItems.map((item, index) => (
-            <li key={`${id}-bullet-${index}`}>{item}</li>
+            <li key={`${id}-bullet-${index}`} className="whitespace-pre-wrap">
+              {item}
+            </li>
           ))}
         </ul>
       ) : (

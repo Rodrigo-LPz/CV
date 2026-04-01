@@ -33,6 +33,41 @@ function CurvedArrowIcon() {
   );
 }
 
+function renderSectionList(text: string) {
+  const normalized = text.replace(/\r/g, '');
+  const items = normalized
+    .split(/[●•]/)
+    .map((item) => item.trim())
+    .filter(Boolean);
+
+  if (items.length > 1) {
+    return (
+      <ul className="list-disc space-y-2 pl-5 text-sm leading-relaxed text-[var(--muted)] marker:text-[var(--muted)]">
+        {items.map((item, index) => (
+          <li key={`section-item-${index}`} className="whitespace-pre-wrap">
+            {item.split('\n').map((line, lineIndex, lines) => (
+              <span key={`section-item-${index}-line-${lineIndex}`}>
+                {line}
+                {lineIndex < lines.length - 1 && <br />}
+              </span>
+            ))}
+          </li>
+        ))}
+      </ul>
+    );
+  }
+
+  return (
+    <p className="text-sm leading-relaxed text-[var(--muted)]">
+      {normalized.split('\n').map((line, index, lines) => (
+        <span key={`section-line-${index}`}>
+          {line}
+          {index < lines.length - 1 && <br />}
+        </span>
+      ))}
+    </p>
+  );
+}
 
 export function SiteShell() {
   const [locale, setLocale] = useState<Locale>('es');
@@ -91,7 +126,7 @@ export function SiteShell() {
 
             <div className="mx-auto h-56 w-56 overflow-hidden rounded-full border-4 border-white/15 bg-zinc-700/40 shadow-[0_12px_40px_rgba(0,0,0,0.35)] sm:h-64 sm:w-64">
               <Image
-                src="/profile.jpg"
+                src="/Images/Perfil/FotoDePerfil.png"
                 alt="Foto de perfil de Rodrigo López Pérez"
                 width={512}
                 height={512}
@@ -136,9 +171,7 @@ export function SiteShell() {
                   <School size={18} />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-white">{content.sections.studies.title}</h3>
-                <p className="text-sm leading-relaxed text-[var(--muted)]">
-                  {content.sections.studies.description}
-                </p>
+                {renderSectionList(content.sections.studies.description)}
               </div>
 
               <div
@@ -149,9 +182,7 @@ export function SiteShell() {
                   <ScrollText size={18} />
                 </div>
                 <h3 className="mb-2 text-lg font-semibold text-white">{content.sections.credentials.title}</h3>
-                <p className="text-sm leading-relaxed text-[var(--muted)]">
-                  {content.sections.credentials.description}
-                </p>
+                {renderSectionList(content.sections.credentials.description)}
               </div>
             </div>
           </motion.article>
