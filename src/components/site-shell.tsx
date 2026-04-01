@@ -71,7 +71,13 @@ function renderSectionList(text: string) {
 
 export function SiteShell() {
   const [locale, setLocale] = useState<Locale>('es');
+  const [selectedCategory, setSelectedCategory] = useState<'all' | 'frontend' | 'backend' | 'certificates' | 'resources'>('all');
   const content = useMemo(() => siteContent[locale], [locale]);
+  const references = content.sections.references;
+  const filteredReferences =
+    selectedCategory === 'all'
+      ? references.items
+      : references.items.filter((item) => item.category === selectedCategory);
 
   return (
     <div className="mx-auto max-w-6xl px-6 pb-14 pt-8 md:px-10">
@@ -188,12 +194,87 @@ export function SiteShell() {
           </motion.article>
         </section>
 
-        <SectionCard
+        <motion.article
           id="references"
-          title={content.sections.references.title}
-          description={content.sections.references.description}
-          icon={<CurvedArrowIcon />}
-        />
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.2 }}
+          transition={{ duration: 0.55 }}
+          className="rounded-3xl border border-white/10 bg-[var(--card)]/45 p-6 shadow-[0_8px_30px_rgba(0,0,0,0.25)]"
+        >
+          <div className="mb-6 flex items-start justify-between gap-4">
+            <div>
+              <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl bg-[var(--accent)]/15 text-[var(--accent)]">
+                <CurvedArrowIcon />
+              </div>
+              <h2 className="mb-2 text-2xl font-bold text-white">{references.title}</h2>
+              <p className="text-sm leading-relaxed text-[var(--muted)]">{references.description}</p>
+            </div>
+          </div>
+
+          <div className="mb-5 flex flex-wrap gap-2">
+            {references.categories.map((category) => (
+              <button
+                key={category.value}
+                type="button"
+                onClick={() => setSelectedCategory(category.value)}
+                className={`rounded-full border px-4 py-2 text-sm font-semibold transition ${
+                  selectedCategory === category.value
+                    ? 'border-[var(--accent)] bg-[var(--accent)]/15 text-[var(--accent)]'
+                    : 'border-white/10 bg-white/5 text-[var(--muted)] hover:border-white/20 hover:text-white'
+                }`}
+              >
+                {category.label}
+              </button>
+            ))}
+          </div>
+
+          <div className="grid gap-4 md:grid-cols-2">
+            {filteredReferences.map((item) => (
+              <article
+                key={item.title}
+                className="rounded-3xl border border-white/10 bg-[var(--surface)]/45 p-5 shadow-[0_8px_20px_rgba(0,0,0,0.2)]"
+              >
+                <div className="mb-4 space-y-2">
+                  <h3 className="text-xl font-semibold text-white">{item.title}</h3>
+                  <p className="text-sm font-medium uppercase tracking-[0.24em] text-[var(--accent)]">
+                    {item.subtitle}
+                  </p>
+                </div>
+                <p className="mb-4 text-sm leading-relaxed text-[var(--muted)]">{item.description}</p>
+                <div className="mb-4 flex flex-wrap gap-2">
+                  {item.tags.map((tag) => (
+                    <span
+                      key={`${item.title}-${tag}`}
+                      className="rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs font-medium text-[var(--muted)]"
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-2">
+                  {item.links.map((link) => (
+                    <a
+                      key={`${item.title}-${link.label}`}
+                      href={link.href}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="rounded-full border border-white/10 bg-[var(--accent)]/10 px-4 py-2 text-sm font-semibold text-[var(--accent)] transition hover:bg-[var(--accent)]/20"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </div>
+              </article>
+            ))}
+
+            {filteredReferences.length === 0 && (
+              <div className="rounded-3xl border border-white/10 bg-[var(--surface)]/45 p-6 text-sm leading-relaxed text-[var(--muted)]">
+                No hay elementos para esta categoría.
+              </div>
+            )}
+          </div>
+        </motion.article>
 
         <motion.article
           id="techStack"

@@ -21,6 +21,30 @@ type Section = {
   description: string;
 };
 
+type ReferenceLink = {
+  label: string;
+  href: string;
+};
+
+type ReferenceItem = {
+  title: string;
+  subtitle: string;
+  description: string;
+  tags: string[];
+  links: ReferenceLink[];
+  category: 'all' | 'frontend' | 'backend' | 'certificates' | 'resources';
+};
+
+type ReferenceCategory = {
+  label: string;
+  value: ReferenceItem['category'];
+};
+
+type ReferencesSection = Section & {
+  categories: ReferenceCategory[];
+  items: ReferenceItem[];
+};
+
 type Contact = {
   location: string;
   email: string;
@@ -39,7 +63,7 @@ type SiteContent = {
     journey: Section;
     studies: Section;
     credentials: Section;
-    references: Section;
+    references: ReferencesSection;
     techStack: Section;
     hardSkills: Section;
     softSkills: Section;
@@ -86,6 +110,55 @@ export const siteContent: Record<Locale, SiteContent> = {
         title: 'Referencias',
         description:
           'Bloque pensado para enlazar proyectos destacados y recursos compartibles, similar a una sección de difusión.',
+        categories: [
+          { label: 'Todos', value: 'all' },
+          { label: 'Frontend', value: 'frontend' },
+          { label: 'Backend', value: 'backend' },
+          { label: 'Recursos', value: 'resources' },
+        ],
+        items: [
+          {
+            title: 'Portafolio web personal',
+            subtitle: 'Next.js · TypeScript · Tailwind',
+            description: 'Sitio responsivo para mostrar experiencia, proyectos y contacto.',
+            tags: ['Next.js', 'Tailwind', 'TypeScript'],
+            links: [
+              { label: 'Ver código', href: 'https://github.com/Rodrigo-LPz/portfolio' },
+              { label: 'Abrir sitio', href: 'https://rodrigo-lpz.vercel.app' },
+            ],
+            category: 'frontend',
+          },
+          {
+            title: 'API REST de tareas',
+            subtitle: 'Node.js · Express · PostgreSQL',
+            description: 'Backend ligero con endpoints CRUD y estructura escalable.',
+            tags: ['Node.js', 'Express', 'PostgreSQL'],
+            links: [
+              { label: 'Ver código', href: 'https://github.com/Rodrigo-LPz/api-rest-tasks' },
+            ],
+            category: 'backend',
+          },
+          {
+            title: 'Recursos de formación',
+            subtitle: 'Certificados y guías prácticas',
+            description: 'Documentación de certificaciones y recursos de aprendizaje compartibles.',
+            tags: ['Google Actívate', 'Certificados', 'Recursos'],
+            links: [
+              { label: 'Ver recursos', href: 'https://activate.google.com' },
+            ],
+            category: 'certificates',
+          },
+          {
+            title: 'Demo de UI interactiva',
+            subtitle: 'Componentes animados con Framer Motion',
+            description: 'Interfaz de navegación y tarjetas dinámicas con filtros y transiciones suaves.',
+            tags: ['Framer Motion', 'UI', 'Interactividad'],
+            links: [
+              { label: 'Ver demo', href: 'https://github.com/Rodrigo-LPz/ui-demo' },
+            ],
+            category: 'resources',
+          },
+        ],
       },
       techStack: {
         title: 'Stack técnico',
@@ -152,6 +225,55 @@ export const siteContent: Record<Locale, SiteContent> = {
       references: {
         title: 'References',
         description: 'Section intended for featured project links and share-friendly resources.',
+        categories: [
+          { label: 'All', value: 'all' },
+          { label: 'Frontend', value: 'frontend' },
+          { label: 'Backend', value: 'backend' },
+          { label: 'Resources', value: 'resources' },
+        ],
+        items: [
+          {
+            title: 'Personal portfolio',
+            subtitle: 'Next.js · TypeScript · Tailwind',
+            description: 'Responsive site to showcase experience, projects, and contact details.',
+            tags: ['Next.js', 'Tailwind', 'TypeScript'],
+            links: [
+              { label: 'View code', href: 'https://github.com/Rodrigo-LPz/portfolio' },
+              { label: 'Open site', href: 'https://rodrigo-lpz.vercel.app' },
+            ],
+            category: 'frontend',
+          },
+          {
+            title: 'Task REST API',
+            subtitle: 'Node.js · Express · PostgreSQL',
+            description: 'Lightweight backend with CRUD endpoints and scalable structure.',
+            tags: ['Node.js', 'Express', 'PostgreSQL'],
+            links: [
+              { label: 'View code', href: 'https://github.com/Rodrigo-LPz/api-rest-tasks' },
+            ],
+            category: 'backend',
+          },
+          {
+            title: 'Learning resources',
+            subtitle: 'Certificates and practical guides',
+            description: 'Documentation of certifications and shared study resources.',
+            tags: ['Google Actívate', 'Certificates', 'Resources'],
+            links: [
+              { label: 'View resources', href: 'https://activate.google.com' },
+            ],
+            category: 'certificates',
+          },
+          {
+            title: 'Interactive UI demo',
+            subtitle: 'Animated components with Framer Motion',
+            description: 'Navigation and cards with filters and smooth transitions.',
+            tags: ['Framer Motion', 'UI', 'Interactivity'],
+            links: [
+              { label: 'View demo', href: 'https://github.com/Rodrigo-LPz/ui-demo' },
+            ],
+            category: 'resources',
+          },
+        ],
       },
       techStack: {
         title: 'Tech stack',
