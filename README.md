@@ -27,3 +27,4 @@ npm run build
 3. Incorporar capturas y casos de estudio en proyectos.
 4. Integrar enlaces reales (GitHub, LinkedIn, contacto).
 5. Publicar en Vercel con dominio personalizado.
+5. Publicar en Vercel con dominio personalizado.
